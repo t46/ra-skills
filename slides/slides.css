@@ -47,7 +47,7 @@ body.light-bg .bg { opacity: .28; }
   inset: 0;
   z-index: 10;
   display: flex;
-  width: 900vw;
+  width: 1100vw;
   height: 100vh;
   transform: translateX(0);
   transition: transform .82s cubic-bezier(.77, 0, .175, 1);
@@ -221,8 +221,13 @@ body.light-bg .bg { opacity: .28; }
 .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .grid-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
+.skill-matrix {
+  gap: 2.2vh 3.4vw;
+}
+
 .stat-card,
 .pillar,
+.mini-skill,
 .prompt-card,
 .output-card,
 .rowline,
@@ -286,6 +291,39 @@ body.light-bg .bg { opacity: .28; }
   font-size: clamp(24px, 2.4vw, 38px);
   font-weight: 700;
   line-height: 1.2;
+}
+
+.mini-skill {
+  min-height: 18vh;
+  padding: 2vh 1.2vw 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: .8vh;
+}
+
+.mini-skill .name {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: #bb4b39;
+}
+
+.dark .mini-skill .name {
+  color: #f2b36d;
+}
+
+.mini-skill .task {
+  font-family: var(--serif);
+  font-size: clamp(21px, 1.75vw, 29px);
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.mini-skill .out {
+  margin-top: auto;
+  font-size: clamp(13px, .98vw, 17px);
+  line-height: 1.55;
+  opacity: .72;
 }
 
 .split {
@@ -448,6 +486,7 @@ body.light-bg .bg { opacity: .28; }
   }
   .stat-card,
   .pillar,
+  .mini-skill,
   .step,
   .prompt-card,
   .output-card {

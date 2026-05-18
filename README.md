@@ -35,6 +35,10 @@
 |--------|----------|------|
 | [予算執行管理](skills/budget-execution/SKILL.md) | `/budget-execution` | 研究費の発注前確認、年度末処理、証憑整理を支援する |
 | [研究データ管理・DMP 作成支援](skills/research-data-management/SKILL.md) | `/research-data-management` | DMP の作成とデータ公開・保管方針の整理を支援する |
+| [研究プロジェクト会議運営](skills/project-meeting-ops/SKILL.md) | `/project-meeting-ops` | 定例会議、日程調整、アジェンダ、議事録、ToDoフォローを運営する |
+| [研究プロジェクト進捗管理](skills/project-progress-tracker/SKILL.md) | `/project-progress-tracker` | マイルストーン、課題、成果、リスクを月次で追跡する |
+| [研究費申請 内部締切トラッカー](skills/internal-deadline-tracker/SKILL.md) | `/internal-deadline-tracker` | 外部締切から学内締切、部局承認、e-Rad承認を逆算する |
+| [研究プロジェクト関係者調整](skills/stakeholder-coordination/SKILL.md) | `/stakeholder-coordination` | 学内外関係者、合意事項、未決事項、確認依頼を整理する |
 
 ### 分析系
 
@@ -68,6 +72,8 @@
 - [RA Skills 実務適合性監査](docs/skill-audit.md)
 - [RA / URA 業務地図](docs/ra-work-map.md)
 - [RA Skills ロードマップ](docs/skill-roadmap.md)
+- [RAスキル実務サーベイ 2026](docs/ra-skill-field-survey-2026.md)
+- [RAスキル試行テスト結果](docs/skill-test-results.md)
 
 ## 使い方
 
@@ -98,6 +104,10 @@ claude --add-dir ./ra-skills/skills/policy-monitor \
        --add-dir ./ra-skills/skills/grant-proposal-review \
        --add-dir ./ra-skills/skills/budget-planning \
        --add-dir ./ra-skills/skills/budget-execution \
+       --add-dir ./ra-skills/skills/project-meeting-ops \
+       --add-dir ./ra-skills/skills/project-progress-tracker \
+       --add-dir ./ra-skills/skills/internal-deadline-tracker \
+       --add-dir ./ra-skills/skills/stakeholder-coordination \
        --add-dir ./ra-skills/skills/ethics-review-support \
        --add-dir ./ra-skills/skills/progress-report \
        --add-dir ./ra-skills/skills/research-data-management \

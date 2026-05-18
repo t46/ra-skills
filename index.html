@@ -37,7 +37,7 @@
             <span>試しています。</span>
           </h1>
           <p class="lead">
-            RA Skills は、研究費申請、報告書、予算、研究データ管理、イベント運営などの研究アドミニストレーション業務を、AI エージェントのスキルとして整理できないか試し始めた公開リポジトリです。まだたたき台なので、現場の知見をぜひ教えてください。
+            RA Skills は、研究費申請、報告書、予算、会議運営、進捗管理、研究データ管理などの研究アドミニストレーション業務を、AI エージェントのスキルとして整理できないか試し始めた公開リポジトリです。まだたたき台なので、現場の知見をぜひ教えてください。
           </p>
           <div class="actions">
             <a class="button" href="https://github.com/t46/ra-skills">GitHub で見る</a>
@@ -115,7 +115,7 @@
             <h2>今あるスキルは、まず作ってみた試作です。</h2>
           </div>
           <p>
-            現在のリポジトリには、研究費、公募、申請書、報告書、予算、DMP、倫理、イベント運営などを支援するスキルがあります。ただし、完成品ではなく「これで現場に合っているか」を確認するための初期版です。
+            現在のリポジトリには、研究費、公募、申請書、内部締切、会議、進捗、報告書、予算、DMP、倫理、イベント運営などを支援するスキルがあります。ただし、完成品ではなく「これで現場に合っているか」を確認するための初期版です。
           </p>
         </div>
 
@@ -132,11 +132,16 @@
           </div>
           <div class="step">
             <span class="num">03</span>
-            <h3>運営する</h3>
-            <p>`/budget-execution` と `/progress-report` で、採択後の予算・報告を支える。</p>
+            <h3>締切を逆算する</h3>
+            <p>`/internal-deadline-tracker` で、外部締切、学内締切、部局承認、e-Rad承認を整理する。</p>
           </div>
           <div class="step">
             <span class="num">04</span>
+            <h3>運営する</h3>
+            <p>`/project-meeting-ops` と `/project-progress-tracker` で、会議、ToDo、月次進捗、リスクを追う。</p>
+          </div>
+          <div class="step">
+            <span class="num">05</span>
             <h3>守る・広げる</h3>
             <p>`/ethics-review-support`、`/research-data-management`、`/event-organizer` で周辺実務を支援する。</p>
           </div>
@@ -150,20 +155,20 @@
             <h2>たぶん、RAの仕事はもっと広い。</h2>
           </div>
           <p>
-            MEXT / CRAMS の URA スキル標準 22 業務に照らすと、今の repo はまだ入口です。会議運営、予定調整、進捗管理、内部・対外折衝、契約、知財、安全管理、輸出管理、研究広報など、実務に詳しい方に確認したい領域が多く残っています。
+            MEXT / CRAMS の URA スキル標準 22 業務に照らすと、今の repo はまだ入口です。今回、会議運営、予定調整、進捗管理、内部・対外折衝の入口は追加しましたが、契約、知財、安全管理、輸出管理、研究広報など、実務に詳しい方に確認したい領域が多く残っています。
           </p>
         </div>
 
         <div class="coverage">
           <div class="coverage-panel">
             <h3>現時点の見立て</h3>
-            <p class="callout">書類作成支援だけでは、RA業務の全体像には届かなそうです。次に何を作るべきかは、ぜひ現場の方に教えてほしいです。</p>
+            <p class="callout">書類作成支援だけでは、RA業務の全体像には届かなそうです。会議・進捗・締切の初版を足しましたが、まだ現場でどう直すべきかを知りたいです。</p>
           </div>
           <div class="coverage-panel">
             <div class="meter-list">
               <div class="meter"><span>公募・申請</span><div class="bar"><span style="width: 72%"></span></div><strong>中</strong></div>
               <div class="meter"><span>予算・報告</span><div class="bar"><span style="width: 62%"></span></div><strong>中</strong></div>
-              <div class="meter"><span>進捗・会議</span><div class="bar"><span style="width: 18%"></span></div><strong>薄い</strong></div>
+              <div class="meter"><span>進捗・会議</span><div class="bar"><span style="width: 52%"></span></div><strong>初版</strong></div>
               <div class="meter"><span>契約・知財</span><div class="bar"><span style="width: 12%"></span></div><strong>薄い</strong></div>
               <div class="meter"><span>広報・国際</span><div class="bar"><span style="width: 22%"></span></div><strong>薄い</strong></div>
             </div>
@@ -186,7 +191,7 @@
           <article class="card">
             <span class="label">Tier 0</span>
             <h3>会議・進捗・締切</h3>
-            <p>`project-meeting-ops`、`project-progress-tracker`、`internal-deadline-tracker` などが必要そうだ、という仮説です。</p>
+            <p>`project-meeting-ops`、`project-progress-tracker`、`internal-deadline-tracker`、`stakeholder-coordination` の初版を追加しました。</p>
           </article>
           <article class="card">
             <span class="label">Tier 1</span>

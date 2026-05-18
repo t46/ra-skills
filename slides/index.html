@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RA Skills | AI for RA 勉強会</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230c0d10'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-size='18' font-family='monospace' fill='%23f7f3e8'%3ERA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slides.css">
+  </head>
+  <body>
+    <main class="deck">
+      <section class="slide active">
+        <div class="topline"><span>AI for RA / 2026-05-20</span><span>Shiro Takagi</span></div>
+        <div class="content">
+          <h1>RA Skills を作りました</h1>
+          <p class="lead">Research Administration の仕事を、AI エージェントが手伝える「スキル」として共有するための公開リポジトリです。</p>
+        </div>
+        <div class="footer"><span>github.com/t46/ra-skills</span><span>01</span></div>
+        <aside class="notes">
+          今日は完成品の発表というより、AI for RA をみんなで進めるための、かなり具体的なたたき台を持ってきました。RA Skills という GitHub リポジトリを作っています。ここでいう RA は Research Assistant ではなく、Research Administration、つまり研究を支える実務全体です。
+        </aside>
+      </section>
+
+      <section class="slide light">
+        <div class="topline"><span>WHY</span><span>02</span></div>
+        <div class="content">
+          <h2>研究のまわりには、AIに任せたい仕事が山ほどある。</h2>
+          <div class="grid-3">
+            <div class="card"><strong>研究費</strong><span>公募検索、要件確認、申請書、予算、e-Rad。</span></div>
+            <div class="card"><strong>採択後</strong><span>会議、進捗、予算執行、報告書、評価対応。</span></div>
+            <div class="card"><strong>周辺実務</strong><span>倫理、DMP、契約、知財、広報、イベント。</span></div>
+          </div>
+        </div>
+        <div class="footer"><span>AI for Science の前に、AI for Research Administration</span><span></span></div>
+        <aside class="notes">
+          AI for Science というと、研究の本体をAIがやる話になりがちです。でも実際には、研究の周辺にある仕事がとても多い。公募を探す、申請書を整える、予算を組む、採択後に会議を回す、報告書を書く。ここをAIが支えられるだけでも、研究現場にはかなり効くはずです。
+        </aside>
+      </section>
+
+      <section class="slide">
+        <div class="topline"><span>WHAT IS A SKILL?</span><span>03</span></div>
+        <div class="content">
+          <div class="big-stat">
+            <div class="stat-number">SKILL</div>
+            <div>
+              <h2>プロンプト集ではなく、業務手順のパッケージ。</h2>
+              <p class="lead">入力、手順、成果物、品質基準を `SKILL.md` として書く。AI エージェントはそれを読んで、具体的な作業に入れる。</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span>Input → Procedure → Output → Quality Gate</span><span></span></div>
+        <aside class="notes">
+          ポイントは、単なるプロンプト集ではないということです。スキルには、何を入力として受け取るか、どの順番で確認するか、最終的に何を出すか、品質基準は何かを書きます。つまり現場のノウハウを、AIが実行しやすい業務手順としてパッケージ化するイメージです。
+        </aside>
+      </section>
+
+      <section class="slide light">
+        <div class="topline"><span>CURRENT REPOSITORY</span><span>04</span></div>
+        <div class="content">
+          <h2>今あるスキルは12本。</h2>
+          <div class="grid-4">
+            <div class="card"><strong>探す</strong><span>policy-monitor<br>funding-search</span></div>
+            <div class="card"><strong>申請する</strong><span>grant-proposal-review<br>budget-planning</span></div>
+            <div class="card"><strong>運営する</strong><span>budget-execution<br>progress-report</span></div>
+            <div class="card"><strong>守る・広げる</strong><span>ethics-review-support<br>research-data-management<br>event-organizer</span></div>
+          </div>
+        </div>
+        <div class="footer"><span>まずは「研究費・報告・予算・DMP」あたりから</span><span></span></div>
+        <aside class="notes">
+          今あるものは12本です。公募や政策情報を探すもの、申請書や予算を支援するもの、採択後の予算執行や報告書を支援するもの、倫理審査やDMP、イベント運営を支援するものがあります。まだ粗いですが、どんな業務をAIに渡せるかを考える入口にはなります。
+        </aside>
+      </section>
+
+      <section class="slide">
+        <div class="topline"><span>WHAT IT CAN DO</span><span>05</span></div>
+        <div class="content">
+          <h2>例えば、こんな依頼を渡せる。</h2>
+          <div class="demo-box">
+            <div class="prompt">
+              <strong class="accent">User</strong><br><br>
+              「若手PI向けに、今後3ヶ月で出せる研究費公募を探して。AIとメタサイエンス寄り。締切と学内準備も逆算して。」
+            </div>
+            <div class="output">
+              <strong class="accent">Skill output</strong><br><br>
+              公募一覧<br>
+              適合度と理由<br>
+              公式URL<br>
+              応募資格<br>
+              内部締切の確認事項<br>
+              申請準備 ToDo
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span>非開発者にも伝えたいのは「何を頼めるか」</span><span></span></div>
+        <aside class="notes">
+          非開発者に伝えるなら、リポジトリの構造より「何を頼めるのか」が大事だと思っています。たとえば若手PI向けの公募を探して、適合度と締切、学内確認、申請準備を出す。あるいは申請書を見て、審査観点ごとに弱いところを直す。こういう具体的な依頼の形に落ちます。
+        </aside>
+      </section>
+
+      <section class="slide light">
+        <div class="topline"><span>REALITY CHECK</span><span>06</span></div>
+        <div class="content">
+          <h2>監査して分かったこと。RA業務はもっと広い。</h2>
+          <div class="process">
+            <div><b>01</b>政策・研究力分析</div>
+            <div><b>02</b>公募・申請支援</div>
+            <div><b>03</b>内部/対外折衝</div>
+            <div><b>04</b>進捗・会議・予算</div>
+            <div><b>05</b>契約・知財・広報</div>
+          </div>
+          <p class="lead">今の repo は「書類作成支援」に寄っている。次は、研究プロジェクトを実際に回すスキルが必要。</p>
+        </div>
+        <div class="footer"><span>MEXT / CRAMS の URA 22 業務と照合</span><span></span></div>
+        <aside class="notes">
+          その後、MEXTやCRAMSのURAスキル標準に照らして監査しました。すると、今のリポジトリは公募、申請、予算、報告の入口にはなっている一方で、実際のRA業務のかなり重要な部分が薄い。内部調整、対外折衝、定例会議、進捗管理、契約、知財、研究広報などです。
+        </aside>
+      </section>
+
+      <section class="slide">
+        <div class="topline"><span>ROADMAP</span><span>07</span></div>
+        <div class="content">
+          <h2>次に作るべきスキル。</h2>
+          <div class="roadmap">
+            <div class="roadmap-row"><b>Tier 0</b><span>project-meeting-ops / project-progress-tracker / internal-deadline-tracker / stakeholder-coordination</span></div>
+            <div class="roadmap-row"><b>Tier 1</b><span>collaboration-contract-intake / ip-disclosure-triage / export-control-intake / research-pr-support</span></div>
+            <div class="roadmap-row"><b>Tier 2</b><span>research-strategy-brief / international-collaboration-logistics / project-closeout</span></div>
+          </div>
+        </div>
+        <div class="footer"><span>書類から、運営・調整・専門部署連携へ</span><span></span></div>
+        <aside class="notes">
+          次に作るべきものはかなり明確です。まずは会議、進捗、締切、関係者調整。ここは多くの研究プロジェクトに共通していて、AIがすぐ役に立ちやすい。次に契約、知財、輸出管理、広報。ただしここはAIが判断を代行するのではなく、専門部署に渡すための論点整理をする形がよいと思っています。
+        </aside>
+      </section>
+
+      <section class="slide light">
+        <div class="topline"><span>INVITATION</span><span>08</span></div>
+        <div class="content">
+          <h2>現場の知識を、共有可能な形にしたい。</h2>
+          <div class="grid-3">
+            <div class="card"><strong>試す</strong><span>実際の業務で、AIに渡せるタスクを見つける。</span></div>
+            <div class="card"><strong>直す</strong><span>制度・機関差・現場の順番に合っていないところを教えてほしい。</span></div>
+            <div class="card"><strong>増やす</strong><span>自分のRA業務を SKILL.md にして共有する。</span></div>
+          </div>
+          <p class="lead mono">github.com/t46/ra-skills</p>
+        </div>
+        <div class="footer"><span>AI for RA は、現場の人と一緒に作る必要がある</span><span></span></div>
+        <aside class="notes">
+          最後にお願いです。このプロジェクトは、開発者だけで作ってもたぶん外します。実際のURA、大学事務、研究者が、どこで困っているか、どの順番で確認しているか、何をAIに任せられると助かるかを教えてほしいです。それをスキルとして共有できる形にすると、AI for RA はかなり実務に近づくと思っています。
+        </aside>
+      </section>
+    </main>
+    <div class="progress"></div>
+    <div class="hint">← → / Space / F</div>
+    <script src="slides.js"></script>
+  </body>
+</html>

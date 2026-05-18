@@ -2,6 +2,7 @@
 name: era-guide
 description: e-Rad（府省共通研究開発管理システム）の使い方ガイド・操作支援
 user_invocable: true
+license: MIT
 ---
 
 # e-Rad 操作ガイド・支援

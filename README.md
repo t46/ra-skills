@@ -21,12 +21,20 @@
 |--------|----------|------|
 | [申請書レビュー](skills/grant-proposal-review/SKILL.md) | `/grant-proposal-review` | 研究費申請書をレビューし改善提案を行う |
 | [予算策定](skills/budget-planning/SKILL.md) | `/budget-planning` | 研究予算の策定・妥当性チェックを行う |
+| [研究倫理審査 申請支援](skills/ethics-review-support/SKILL.md) | `/ethics-review-support` | 倫理審査の要否判定、申請準備、差し戻し対応を支援する |
 
 ### 報告書系
 
 | スキル | コマンド | 説明 |
 |--------|----------|------|
 | [進捗報告書作成支援](skills/progress-report/SKILL.md) | `/progress-report` | 研究進捗報告書の作成を支援する |
+
+### 研究管理系
+
+| スキル | コマンド | 説明 |
+|--------|----------|------|
+| [予算執行管理](skills/budget-execution/SKILL.md) | `/budget-execution` | 研究費の発注前確認、年度末処理、証憑整理を支援する |
+| [研究データ管理・DMP 作成支援](skills/research-data-management/SKILL.md) | `/research-data-management` | DMP の作成とデータ公開・保管方針の整理を支援する |
 
 ### 分析系
 
@@ -52,6 +60,14 @@
 | スキル | コマンド | 説明 |
 |--------|----------|------|
 | [RA スキルジェネレーター](skills/create-ra-skill/SKILL.md) | `/create-ra-skill` | 自分の RA 知見を SKILL.md に変換する |
+
+## 実務適合性チェック
+
+このリポジトリのスキルは、MEXT / CRAMS の URA スキル標準と国内大学の研究支援実務を基準に監査しています。
+
+- [RA Skills 実務適合性監査](docs/skill-audit.md)
+- [RA / URA 業務地図](docs/ra-work-map.md)
+- [RA Skills ロードマップ](docs/skill-roadmap.md)
 
 ## 使い方
 
@@ -81,9 +97,13 @@ claude --add-dir ./ra-skills/skills/policy-monitor \
        --add-dir ./ra-skills/skills/funding-search \
        --add-dir ./ra-skills/skills/grant-proposal-review \
        --add-dir ./ra-skills/skills/budget-planning \
+       --add-dir ./ra-skills/skills/budget-execution \
+       --add-dir ./ra-skills/skills/ethics-review-support \
        --add-dir ./ra-skills/skills/progress-report \
+       --add-dir ./ra-skills/skills/research-data-management \
        --add-dir ./ra-skills/skills/research-metrics \
        --add-dir ./ra-skills/skills/era-guide \
+       --add-dir ./ra-skills/skills/event-organizer \
        --add-dir ./ra-skills/skills/create-ra-skill
 ```
 
@@ -104,7 +124,7 @@ claude --add-dir ./ra-skills/skills/create-ra-skill
 ### 方法 2: 手動で作成する
 
 1. このリポジトリを fork する
-2. `skills/{skill-name}/SKILL.md` を作成する（[CONTRIBUTING.md](CONTRIBUTING.md) 参照）
+2. `skills/{skill-name}/SKILL.md` を作成する（[skill-template.md](skill-template.md) と [CONTRIBUTING.md](CONTRIBUTING.md) 参照）
 3. Pull Request を作成する
 
 詳しくは [CONTRIBUTING.md](CONTRIBUTING.md) をご覧ください。
@@ -113,12 +133,9 @@ claude --add-dir ./ra-skills/skills/create-ra-skill
 
 まだ作られていないスキルのアイデア:
 
-- **研究倫理審査支援** — IRB・倫理委員会への申請支援
 - **産学連携コーディネート** — 共同研究契約、知財管理の支援
-- **研究データ管理** — データ管理計画（DMP）の策定支援
 - **国際共同研究支援** — 海外機関との契約・渡航手続きの支援
 - **研究広報支援** — プレスリリース作成、研究成果の発信支援
-- **予算執行管理** — 研究費の適正執行チェック、年度末処理
 - **知財管理** — 特許出願・ライセンス管理の支援
 - **安全保障輸出管理** — 該非判定、輸出許可申請の支援
 

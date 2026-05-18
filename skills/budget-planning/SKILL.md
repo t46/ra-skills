@@ -2,6 +2,7 @@
 name: budget-planning
 description: 研究予算の策定・チェックを行う
 user_invocable: true
+license: MIT
 ---
 
 # 研究予算策定・チェック

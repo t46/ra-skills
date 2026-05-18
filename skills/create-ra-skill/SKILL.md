@@ -2,6 +2,7 @@
 name: create-ra-skill
 description: RA業務の知見を対話的にヒアリングし、SKILL.md フォーマットのスキル定義を自動生成する
 user_invocable: true
+license: MIT
 ---
 
 # RA スキルジェネレーター

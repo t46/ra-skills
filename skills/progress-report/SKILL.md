@@ -2,6 +2,7 @@
 name: progress-report
 description: 研究進捗報告書の作成を支援する
 user_invocable: true
+license: MIT
 ---
 
 # 研究進捗報告書 作成支援

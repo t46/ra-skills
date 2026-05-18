@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RA Skills | AI for Research Administration</title>
+    <meta name="description" content="RA Skills は、研究費申請、報告書、予算、イベント運営などの研究アドミニストレーション業務を AI エージェントのスキルとして共有するプロジェクトです。">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23151515'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-size='18' font-family='monospace' fill='%23fbfaf6'%3ERA%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#">
+        <span class="brand-mark">RA</span>
+        <span>RA Skills</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#what">何をするか</a>
+        <a href="#skills">スキル一覧</a>
+        <a href="#map">業務地図</a>
+        <a href="slides/">発表スライド</a>
+        <a href="https://github.com/t46/ra-skills">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">AI for Research Administration</p>
+          <h1>
+            <span>研究を支える</span>
+            <span>仕事を、</span>
+            <span>AIが手伝える</span>
+            <span>形にする。</span>
+          </h1>
+          <p class="lead">
+            RA Skills は、研究費申請、報告書、予算、研究データ管理、イベント運営などの研究アドミニストレーション業務を、AI エージェントが実行できるスキルとして整理する公開リポジトリです。
+          </p>
+          <div class="actions">
+            <a class="button" href="https://github.com/t46/ra-skills">GitHub で見る</a>
+            <a class="button secondary" href="slides/">10分発表スライド</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="RA Skills の概念図">
+          <div class="system-map">
+            <div class="map-title">
+              <span>RESEARCH ADMINISTRATION</span>
+              <span>SKILL HUB</span>
+            </div>
+            <div class="map-line line-1"></div>
+            <div class="map-line line-2"></div>
+            <div class="map-line line-3"></div>
+            <div class="map-node node-a">
+              <strong>研究費を探す</strong>
+              <span>公募情報、締切、適合度、学内締切を整理する。</span>
+            </div>
+            <div class="map-node node-b">
+              <strong>申請書を磨く</strong>
+              <span>審査観点、ストーリー、予算根拠を確認する。</span>
+            </div>
+            <div class="map-node node-c">
+              <strong>採択後を回す</strong>
+              <span>予算、報告、成果、会議、タスクを追う。</span>
+            </div>
+            <div class="map-node node-d">
+              <strong>専門部署へつなぐ</strong>
+              <span>倫理、DMP、知財、契約、輸出管理の論点を整理する。</span>
+            </div>
+            <div class="map-node node-e">
+              <strong>現場知を増やす</strong>
+              <span>URA / 研究者 / 事務のノウハウを skill にする。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="what">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">What this project is</p>
+            <h2>リポジトリを見る前に、何のためのものか分かるように。</h2>
+          </div>
+          <p>
+            ここでいう RA は Research Assistant ではなく、Research Administration、つまり研究を支える実務全体を指します。URA、大学事務、研究者、研究所スタッフが担っている仕事を、AI に渡せる単位へ分解します。
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <span class="label">Problem</span>
+            <h3>研究者も支援者も忙しすぎる</h3>
+            <p>公募検索、申請、報告、予算、会議、広報、倫理、データ管理。研究の周辺には、重要だけれど時間を食う仕事が大量にあります。</p>
+          </article>
+          <article class="card">
+            <span class="label">Approach</span>
+            <h3>業務を「スキル」にする</h3>
+            <p>ただのプロンプト集ではなく、入力、手順、成果物、品質基準を持つ SKILL.md として整理します。</p>
+          </article>
+          <article class="card">
+            <span class="label">Goal</span>
+            <h3>現場知を共有できる形にする</h3>
+            <p>属人的な RA / URA ノウハウを、他の人と AI エージェントが再利用できる形に変換します。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Current skills</p>
+            <h2>今あるスキルで、まず何ができるか。</h2>
+          </div>
+          <p>
+            現在のリポジトリには、研究費、公募、申請書、報告書、予算、DMP、倫理、イベント運営などを支援するスキルがあります。
+          </p>
+        </div>
+
+        <div class="workflow">
+          <div class="step">
+            <span class="num">01</span>
+            <h3>探す</h3>
+            <p>`/funding-search` と `/policy-monitor` で、公募・政策・機会を見つける。</p>
+          </div>
+          <div class="step">
+            <span class="num">02</span>
+            <h3>申請する</h3>
+            <p>`/grant-proposal-review` と `/budget-planning` で、申請書と予算案を整える。</p>
+          </div>
+          <div class="step">
+            <span class="num">03</span>
+            <h3>運営する</h3>
+            <p>`/budget-execution` と `/progress-report` で、採択後の予算・報告を支える。</p>
+          </div>
+          <div class="step">
+            <span class="num">04</span>
+            <h3>守る・広げる</h3>
+            <p>`/ethics-review-support`、`/research-data-management`、`/event-organizer` で周辺実務を支援する。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="map">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Reality check</p>
+            <h2>ただし、RAの仕事はもっと広い。</h2>
+          </div>
+          <p>
+            MEXT / CRAMS の URA スキル標準 22 業務に照らすと、今の repo はまだ入口です。会議運営、予定調整、進捗管理、内部・対外折衝、契約、知財、安全管理、輸出管理、研究広報が今後の重点です。
+          </p>
+        </div>
+
+        <div class="coverage">
+          <div class="coverage-panel">
+            <h3>現時点の見立て</h3>
+            <p class="callout">書類作成支援だけでは、RA業務の全体像には届かない。次に必要なのは、研究プロジェクトを実際に回すためのスキル。</p>
+          </div>
+          <div class="coverage-panel">
+            <div class="meter-list">
+              <div class="meter"><span>公募・申請</span><div class="bar"><span style="width: 72%"></span></div><strong>中</strong></div>
+              <div class="meter"><span>予算・報告</span><div class="bar"><span style="width: 62%"></span></div><strong>中</strong></div>
+              <div class="meter"><span>進捗・会議</span><div class="bar"><span style="width: 18%"></span></div><strong>薄い</strong></div>
+              <div class="meter"><span>契約・知財</span><div class="bar"><span style="width: 12%"></span></div><strong>薄い</strong></div>
+              <div class="meter"><span>広報・国際</span><div class="bar"><span style="width: 22%"></span></div><strong>薄い</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Next roadmap</p>
+            <h2>次に作るべきもの。</h2>
+          </div>
+          <p>
+            5月20日の勉強会では、完成品の発表というより、現場の人と一緒に「AI for RA の業務地図」を作るためのたたき台として共有します。
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <span class="label">Tier 0</span>
+            <h3>会議・進捗・締切</h3>
+            <p>`project-meeting-ops`、`project-progress-tracker`、`internal-deadline-tracker` を最優先で追加する。</p>
+          </article>
+          <article class="card">
+            <span class="label">Tier 1</span>
+            <h3>専門部署へつなぐ</h3>
+            <p>契約、知財、輸出管理、研究広報、安全管理は、判断代行ではなく論点整理スキルとして作る。</p>
+          </article>
+          <article class="card">
+            <span class="label">Tier 2</span>
+            <h3>研究戦略へ広げる</h3>
+            <p>政策情報、研究力分析、公募情報を統合し、部局や研究組織の意思決定に使える形へ広げる。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Resources</p>
+            <h2>発表・監査・ロードマップ。</h2>
+          </div>
+          <p>リポジトリだけ見ても分かりづらい部分を、ページとスライドで見えるようにしました。</p>
+        </div>
+
+        <div class="resource-grid">
+          <a class="resource" href="slides/">
+            <strong>発表スライド</strong>
+            <span>5月20日の10分話題提供用。</span>
+          </a>
+          <a class="resource" href="docs/skill-audit.md">
+            <strong>実務適合性監査</strong>
+            <span>既存スキルの使える点と弱い点。</span>
+          </a>
+          <a class="resource" href="docs/ra-work-map.md">
+            <strong>RA / URA 業務地図</strong>
+            <span>URA 22 業務との対応関係。</span>
+          </a>
+          <a class="resource" href="docs/skill-roadmap.md">
+            <strong>ロードマップ</strong>
+            <span>次に作るスキルの優先順位。</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>RA Skills</strong><br>
+        Research Administration を AI エージェントで支援するための公開スキルハブ。
+      </div>
+      <a href="https://github.com/t46/ra-skills">github.com/t46/ra-skills</a>
+    </footer>
+  </body>
+</html>

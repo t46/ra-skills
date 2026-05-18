@@ -2,6 +2,7 @@
 name: funding-search
 description: 研究費公募情報を検索・フィルタリングする
 user_invocable: true
+license: MIT
 ---
 
 # 研究費公募情報検索

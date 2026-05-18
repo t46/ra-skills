@@ -2,6 +2,7 @@
 name: research-metrics
 description: 研究評価指標（論文数、被引用数、h-index等）の収集・分析を行う
 user_invocable: true
+license: MIT
 ---
 
 # 研究評価指標 収集・分析

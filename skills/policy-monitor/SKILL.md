@@ -2,6 +2,7 @@
 name: policy-monitor
 description: 科学技術政策の最新動向をモニタリング・要約する
 user_invocable: true
+license: MIT
 ---
 
 # 科学技術政策モニタリング

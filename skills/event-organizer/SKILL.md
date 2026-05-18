@@ -2,6 +2,7 @@
 name: event-organizer
 description: Luma＋Zoom（無料）でオンライン勉強会・イベントを企画・運営する
 user_invocable: true
+license: MIT
 ---
 
 # オンライン勉強会 企画・運営

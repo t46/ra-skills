@@ -2,6 +2,7 @@
 name: grant-proposal-review
 description: 研究費申請書のレビュー・改善提案を行う
 user_invocable: true
+license: MIT
 ---
 
 # 研究費申請書レビュー

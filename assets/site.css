@@ -371,6 +371,56 @@ h3 {
   font-size: 14px;
 }
 
+.feedback-section {
+  background:
+    linear-gradient(rgba(21, 21, 21, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 21, 21, .035) 1px, transparent 1px),
+    #f7f4ec;
+  background-size: 32px 32px;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr 1fr;
+  gap: 14px;
+}
+
+.feedback-card {
+  min-height: 270px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.feedback-card.primary {
+  border-color: var(--ink);
+  box-shadow: 10px 10px 0 rgba(21, 21, 21, .08);
+}
+
+.feedback-card .label {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 4px 8px;
+  border: 1px solid currentColor;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.feedback-card p,
+.feedback-card li {
+  color: var(--muted);
+}
+
+.feedback-card ul {
+  margin: 16px 0 0;
+  padding-left: 1.2em;
+}
+
+.feedback-card .button {
+  margin-top: 12px;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -394,7 +444,8 @@ h3 {
 
   .cards,
   .workflow,
-  .resource-grid {
+  .resource-grid,
+  .feedback-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -419,7 +470,8 @@ h3 {
 
   .cards,
   .workflow,
-  .resource-grid {
+  .resource-grid,
+  .feedback-grid {
     grid-template-columns: 1fr;
   }
 

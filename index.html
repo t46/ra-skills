@@ -115,7 +115,7 @@
             <h2>今あるスキルは、まず作ってみた試作です。</h2>
           </div>
           <p>
-            現在のリポジトリには、研究費、公募、申請書、内部締切、会議、進捗、報告書、予算、DMP、倫理、イベント運営などを支援するスキルがあります。ただし、完成品ではなく「これで現場に合っているか」を確認するための初期版です。
+            現在のリポジトリには16本のスキルがあります。研究費、公募、申請書、内部締切、会議、進捗、報告書、予算、DMP、倫理、イベント運営などを支援します。ただし、完成品ではなく「これで現場に合っているか」を確認するための初期版です。
           </p>
         </div>
 
@@ -173,6 +173,36 @@
               <div class="meter"><span>広報・国際</span><div class="bar"><span style="width: 22%"></span></div><strong>薄い</strong></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Prototype test</p>
+            <h2>作ったスキルを、実際の業務っぽいケースに当ててみました。</h2>
+          </div>
+          <p>
+            JST系の大型公募準備と、採択後3か月の月次進捗会議を想定して試行しました。まだ架空ケースですが、締切、関係者、会議、進捗、リスクが成果物として出せるかを確認しています。
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <span class="label">Pre-award</span>
+            <h3>公募準備の逆算</h3>
+            <p>`/internal-deadline-tracker` と `/stakeholder-coordination` で、外部締切、学内締切、共同機関承諾、未決事項を整理しました。</p>
+          </article>
+          <article class="card">
+            <span class="label">Post-award</span>
+            <h3>月次進捗会議</h3>
+            <p>`/project-progress-tracker` と `/project-meeting-ops` で、遅延、倫理確認、RA採用、会議後ToDoを担当者・期限付きで出しました。</p>
+          </article>
+          <article class="card">
+            <span class="label">Result</span>
+            <h3>まだ改善余地あり</h3>
+            <p>会議・締切は使えそうですが、予算執行、成果台帳、契約・知財・輸出管理との接続は次に深めたいところです。</p>
+          </article>
         </div>
       </section>
 

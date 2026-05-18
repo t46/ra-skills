@@ -178,6 +178,10 @@ body.light-bg .bg { opacity: .28; }
   line-height: 1.22;
 }
 
+.title-fit {
+  font-size: clamp(48px, 5.55vw, 84px);
+}
+
 .lead {
   margin: 0;
   max-width: 64vw;

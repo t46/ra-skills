@@ -75,6 +75,12 @@
 - [RAスキル実務サーベイ 2026](docs/ra-skill-field-survey-2026.md)
 - [RAスキル試行テスト結果](docs/skill-test-results.md)
 
+## モデルケース
+
+複数のスキルをつないで、若手PIの外部資金応募支援を試した例です。
+
+- [若手PIのJSTさきがけ応募支援](examples/model-case-pre-award-jst-presto.md)
+
 ## 使い方
 
 ### 前提条件

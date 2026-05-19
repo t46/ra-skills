@@ -47,7 +47,7 @@ body.light-bg .bg { opacity: .28; }
   inset: 0;
   z-index: 10;
   display: flex;
-  width: 1300vw;
+  width: 1500vw;
   height: 100vh;
   transform: translateX(0);
   transition: transform .82s cubic-bezier(.77, 0, .175, 1);

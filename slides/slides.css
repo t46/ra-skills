@@ -342,6 +342,87 @@ body.light-bg .bg { opacity: .28; }
   align-items: center;
 }
 
+.skill-explainer {
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: 4.2vw;
+}
+
+.skill-body {
+  max-width: 46vw;
+}
+
+.skill-diagram {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1.06fr) 34px minmax(0, 1fr);
+  grid-template-rows: minmax(13vh, auto) auto auto;
+  gap: 1.3vh .9vw;
+  align-items: stretch;
+}
+
+.skill-node {
+  min-height: 15vh;
+  padding: 1.8vh 1.2vw;
+  border: 1px solid rgba(var(--ink-rgb), .28);
+  background: rgba(var(--paper-rgb), .52);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill-node.file {
+  background: rgba(var(--ink-rgb), .08);
+  border-color: rgba(var(--ink-rgb), .48);
+}
+
+.skill-node strong {
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.45vw, 25px);
+  line-height: 1.35;
+}
+
+.node-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  opacity: .62;
+}
+
+.diagram-arrow {
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 44px);
+  opacity: .52;
+}
+
+.diagram-output {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .8vw;
+}
+
+.output-chip {
+  min-height: 7.4vh;
+  display: grid;
+  place-items: center;
+  border-top: 1px solid rgba(var(--ink-rgb), .34);
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.55vw, 26px);
+  font-weight: 700;
+}
+
+.diagram-note {
+  grid-column: 1 / -1;
+  padding: 1.6vh 1.2vw;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: clamp(14px, 1.06vw, 18px);
+  line-height: 1.65;
+}
+
 .output-split {
   grid-template-columns: 4fr 8fr;
   gap: 3.2vw;

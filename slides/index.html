@@ -91,25 +91,34 @@
           <div>Concept · Agent Skills</div>
           <div>04 / 15</div>
         </div>
-        <div class="frame">
-          <div class="kicker" data-anim style="--i:0">そもそも「スキル」とは</div>
-          <h2 class="h-xl title-fit" data-anim style="--i:1">AIエージェントに、<br>追加の業務手順を<br>渡すものです。</h2>
-          <div class="grid-3">
-            <div class="pillar" data-anim style="--i:2">
-              <div class="ic">01</div>
-              <div class="t">AIエージェント</div>
-              <div class="d">文章を読んで、調べる、整理する、ファイルを作る、確認する、といった作業を進めるAI。</div>
+        <div class="frame skill-explainer">
+          <div class="skill-explainer-copy">
+            <div class="kicker" data-anim style="--i:0">そもそも「スキル」とは</div>
+            <h2 class="h-xl title-fit" data-anim style="--i:1">AIに渡す、<br>業務用の<br>手順書です。</h2>
+            <p class="body skill-body" data-anim style="--i:2">AIエージェントは文章を読み、調べ、整理し、ファイルを作れます。ただし、大学業務の進め方や確認先は最初から知っているわけではありません。そこで「この業務は、何を入力にして、どの順番で進め、何を出力し、どこを確認するか」を <code>SKILL.md</code> に書いて渡します。</p>
+          </div>
+          <div class="skill-diagram" data-anim style="--i:3">
+            <div class="skill-node human">
+              <span class="node-label">現場の知</span>
+              <strong>普段の手順・判断・確認先</strong>
             </div>
-            <div class="pillar" data-anim style="--i:3">
-              <div class="ic">02</div>
-              <div class="t">スキル</div>
-              <div class="d">そのAIに渡す、特定業務の手順書。入力、進め方、成果物、品質基準を書く。</div>
+            <div class="diagram-arrow">→</div>
+            <div class="skill-node file">
+              <span class="node-label">SKILL.md</span>
+              <strong>入力 / 手順 / 成果物 / 品質基準</strong>
             </div>
-            <div class="pillar" data-anim style="--i:4">
-              <div class="ic">03</div>
-              <div class="t">RA Skills</div>
-              <div class="d">RA/URAの現場の知を、AIが読める業務手順として共有するための置き場。</div>
+            <div class="diagram-arrow">→</div>
+            <div class="skill-node agent">
+              <span class="node-label">AIエージェント</span>
+              <strong>読んで、作業し、確認する</strong>
             </div>
+            <div class="diagram-output">
+              <div class="output-chip">公募表</div>
+              <div class="output-chip">ToDo</div>
+              <div class="output-chip">レビュー</div>
+              <div class="output-chip">依頼文</div>
+            </div>
+            <div class="diagram-note">スキルは「AIそのもの」ではなく、AIが業務を外さないための実務メモです。</div>
           </div>
         </div>
         <div class="foot">

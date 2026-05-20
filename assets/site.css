@@ -407,10 +407,15 @@ h3 {
   line-height: 1.65;
 }
 
-.feedback-popover a {
+.feedback-popover a,
+.feedback-email {
   display: inline-flex;
   margin-right: 10px;
   font-weight: 700;
+}
+
+.feedback-email {
+  color: var(--ink);
 }
 
 @media (max-width: 980px) {

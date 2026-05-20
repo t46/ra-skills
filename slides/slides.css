@@ -182,6 +182,11 @@ body.light-bg .bg { opacity: .28; }
   font-size: clamp(48px, 5.55vw, 84px);
 }
 
+.model-title {
+  font-size: clamp(44px, 4.9vw, 74px);
+  line-height: 1.06;
+}
+
 .lead {
   margin: 0;
   max-width: 64vw;
@@ -474,6 +479,61 @@ body.light-bg .bg { opacity: .28; }
 }
 
 .model-table .hot {
+  color: #bb4b39;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.schedule-compact {
+  border-top: 1px solid rgba(127, 127, 127, .42);
+  border-left: 1px solid rgba(127, 127, 127, .42);
+}
+
+.schedule-head,
+.schedule-row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1.25fr) minmax(0, 1.7fr);
+}
+
+.schedule-head span,
+.schedule-row > div {
+  border-right: 1px solid rgba(127, 127, 127, .42);
+  border-bottom: 1px solid rgba(127, 127, 127, .42);
+}
+
+.schedule-head span {
+  padding: 1vh 1vw;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  opacity: .62;
+}
+
+.schedule-row .date {
+  padding: 1.15vh 1vw;
+  font-family: var(--sans);
+  font-size: clamp(22px, 2vw, 34px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.schedule-row .task {
+  padding: 1.2vh 1vw;
+  font-size: clamp(14px, 1.03vw, 18px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.schedule-row .meta {
+  padding: 1.2vh 1vw;
+  font-size: clamp(13px, .96vw, 16px);
+  line-height: 1.45;
+  opacity: .76;
+}
+
+.schedule-row.urgent .meta {
   color: #bb4b39;
   font-weight: 700;
   opacity: 1;

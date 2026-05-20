@@ -436,6 +436,10 @@ body.light-bg .bg { opacity: .28; }
   border-left: 1px solid rgba(127, 127, 127, .42);
 }
 
+.schedule-table {
+  grid-template-columns: 96px minmax(0, 1.75fr) minmax(0, .78fr) minmax(0, .62fr) minmax(0, 1.15fr);
+}
+
 .model-table .th,
 .model-table .td {
   border-right: 1px solid rgba(127, 127, 127, .42);
@@ -457,9 +461,20 @@ body.light-bg .bg { opacity: .28; }
   opacity: .78;
 }
 
+.schedule-table .td {
+  font-size: clamp(12px, .88vw, 15px);
+  line-height: 1.42;
+}
+
 .model-table .key {
   font-family: var(--serif);
   font-size: clamp(18px, 1.45vw, 25px);
+  font-weight: 700;
+  opacity: 1;
+}
+
+.model-table .hot {
+  color: #bb4b39;
   font-weight: 700;
   opacity: 1;
 }

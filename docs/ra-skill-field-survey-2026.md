@@ -9,7 +9,7 @@ date: 2026-05-18
 
 このサーベイは、`ra-skills` の各スキルが日本の大学・研究機関における Research Administration / URA 業務の実態に合っているかを点検し、次に追加・改修すべきスキルを特定するためのもの。
 
-結論として、現行リポジトリは「公募検索、申請書、予算、報告書、DMP」などの文書・情報処理には入口がある一方で、RAが日常的に担う「調整、会議、進捗、締切、関係者管理」が不足していた。今回、まず中核運営系の4スキルを追加した。
+結論として、現行リポジトリは「公募検索、申請書、予算、報告書、DMP」などの文書・情報処理から出発し、RAが日常的に担う「調整、会議、進捗、締切、関係者管理」を補う4スキルを追加した。2026-05-20 にはさらに、採択後立上げ、成果台帳、契約、知財、輸出管理、安全管理、研究広報、国際連携、終了処理、研究戦略の初版を追加した。
 
 ## 参照した実務フレーム
 
@@ -48,9 +48,9 @@ NCURA / SRAI 等の research administration では、研究資金のライフサ
 | 申請書 | `grant-proposal-review`, `budget-planning` | 入口あり | 公募別審査観点、ヒアリング、チーム形成 |
 | 採択後運営 | `budget-execution`, `progress-report`, `research-data-management` | 部分的 | キックオフ、会議、月次進捗、成果台帳、評価対応 |
 | 調整・折衝 | なし | 大きな穴 | 学内外関係者、合意事項、未決事項、専門部署確認 |
-| 専門部署連携 | `ethics-review-support`, `research-data-management` | 部分的 | 契約、知財、輸出管理、安全、COI、情報セキュリティ |
-| 広報・イベント | `event-organizer` | 部分的 | 研究PR、成果報告会、外部評価会、展示会 |
-| 終了処理 | なし | 大きな穴 | closeout、最終報告、成果公開、契約・予算終了、次期資金 |
+| 専門部署連携 | `ethics-review-support`, `research-data-management`, `collaboration-contract-intake`, `ip-disclosure-triage`, `export-control-intake`, `lab-safety-intake` | 初版あり | COI、研究インテグリティ、情報セキュリティ、機関差 |
+| 広報・イベント | `event-organizer`, `research-pr-support` | 初版あり | 研究シーズ、成果報告会、外部評価会、展示会 |
+| 終了処理 | `project-closeout` | 初版あり | 実際の最終報告、予算・契約終了、次期資金接続の試行 |
 
 ## 今足りていない中核スキル
 
@@ -141,19 +141,23 @@ RA業務では、会議を設定し、アジェンダを作り、議事録を残
 
 ## 次に作るべきスキル
 
-優先度A:
+2026-05-20 に初版を追加したスキル:
 
 - `award-kickoff`: 採択後のFA、経理、契約、倫理、DMP、共同機関の初期整理。
 - `research-output-registry`: 論文、学会、特許、データ、広報、受賞の成果台帳。
 - `collaboration-contract-intake`: NDA、共同研究、受託、データ提供契約の初期論点整理。
 - `research-pr-support`: プレスリリース、研究紹介、取材対応、広報確認。
-
-優先度B:
-
 - `ip-disclosure-triage`: 発明相談、論文投稿前確認、共同出願。
 - `export-control-intake`: 技術提供、海外送付、相手先、用途確認。
 - `lab-safety-intake`: 薬品、遺伝子組換え、放射線、病原体等の初期確認。
 - `project-closeout`: 最終報告、成果公開、データ保存、予算・契約終了。
+
+次に作るべき候補:
+
+- `coi-intake`: 利益相反、兼業、寄附、企業連携、研究費の論点整理。
+- `research-integrity-intake`: 研究インテグリティ、海外資金、兼業、所属、役職の確認。
+- `information-security-intake`: 機微情報、クラウド利用、アクセス権限、共同機関共有の確認。
+- `subaward-management`: 再委託、分担機関、請求、成果物、監査対応の管理。
 
 ## 品質ゲート
 

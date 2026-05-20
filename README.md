@@ -33,18 +33,33 @@
 
 | スキル | コマンド | 説明 |
 |--------|----------|------|
+| [採択後キックオフ支援](skills/award-kickoff/SKILL.md) | `/award-kickoff` | 採択後のFA連絡、経理、契約、倫理、DMP、共同機関の初期確認を整理する |
 | [予算執行管理](skills/budget-execution/SKILL.md) | `/budget-execution` | 研究費の発注前確認、年度末処理、証憑整理を支援する |
 | [研究データ管理・DMP 作成支援](skills/research-data-management/SKILL.md) | `/research-data-management` | DMP の作成とデータ公開・保管方針の整理を支援する |
 | [研究プロジェクト会議運営](skills/project-meeting-ops/SKILL.md) | `/project-meeting-ops` | 定例会議、日程調整、アジェンダ、議事録、ToDoフォローを運営する |
 | [研究プロジェクト進捗管理](skills/project-progress-tracker/SKILL.md) | `/project-progress-tracker` | マイルストーン、課題、成果、リスクを月次で追跡する |
 | [研究費申請 内部締切トラッカー](skills/internal-deadline-tracker/SKILL.md) | `/internal-deadline-tracker` | 外部締切から学内締切、部局承認、e-Rad承認を逆算する |
 | [研究プロジェクト関係者調整](skills/stakeholder-coordination/SKILL.md) | `/stakeholder-coordination` | 学内外関係者、合意事項、未決事項、確認依頼を整理する |
+| [研究成果台帳管理](skills/research-output-registry/SKILL.md) | `/research-output-registry` | 論文、学会、特許、データ、広報、受賞を成果台帳として整理する |
+| [研究プロジェクト終了処理](skills/project-closeout/SKILL.md) | `/project-closeout` | 最終報告、予算終了、成果公開、データ保存、次期資金への接続を整理する |
+
+### 専門部署連携系
+
+| スキル | コマンド | 説明 |
+|--------|----------|------|
+| [共同研究・契約インテーク](skills/collaboration-contract-intake/SKILL.md) | `/collaboration-contract-intake` | NDA、共同研究、受託、データ提供、MTA、再委託の初期論点を整理する |
+| [研究広報支援](skills/research-pr-support/SKILL.md) | `/research-pr-support` | プレスリリース、研究紹介、Web掲載、取材対応、英文概要を支援する |
+| [知財相談トリアージ](skills/ip-disclosure-triage/SKILL.md) | `/ip-disclosure-triage` | 発明相談、論文投稿前確認、共同出願、ライセンス可能性を初期整理する |
+| [安全保障輸出管理インテーク](skills/export-control-intake/SKILL.md) | `/export-control-intake` | 技術提供、海外送付、外国機関連携、留学生・外国研究者受入の確認票を作る |
+| [研究安全管理インテーク](skills/lab-safety-intake/SKILL.md) | `/lab-safety-intake` | 薬品、遺伝子組換え、病原体、放射線、動物実験等の安全確認を整理する |
+| [国際連携ロジスティクス支援](skills/international-collaboration-logistics/SKILL.md) | `/international-collaboration-logistics` | 国際共同研究、招聘、MOU、調印式、海外機関連絡を運営する |
 
 ### 分析系
 
 | スキル | コマンド | 説明 |
 |--------|----------|------|
 | [研究評価指標分析](skills/research-metrics/SKILL.md) | `/research-metrics` | 論文数・被引用数・h-index 等を収集・分析する |
+| [研究戦略ブリーフ作成](skills/research-strategy-brief/SKILL.md) | `/research-strategy-brief` | 政策動向、研究力分析、公募情報、学内資源を統合した戦略メモを作る |
 
 ### ユーティリティ
 
@@ -109,15 +124,25 @@ claude --add-dir ./ra-skills/skills/policy-monitor \
        --add-dir ./ra-skills/skills/funding-search \
        --add-dir ./ra-skills/skills/grant-proposal-review \
        --add-dir ./ra-skills/skills/budget-planning \
+       --add-dir ./ra-skills/skills/award-kickoff \
        --add-dir ./ra-skills/skills/budget-execution \
        --add-dir ./ra-skills/skills/project-meeting-ops \
        --add-dir ./ra-skills/skills/project-progress-tracker \
        --add-dir ./ra-skills/skills/internal-deadline-tracker \
        --add-dir ./ra-skills/skills/stakeholder-coordination \
+       --add-dir ./ra-skills/skills/research-output-registry \
+       --add-dir ./ra-skills/skills/project-closeout \
+       --add-dir ./ra-skills/skills/collaboration-contract-intake \
+       --add-dir ./ra-skills/skills/research-pr-support \
+       --add-dir ./ra-skills/skills/ip-disclosure-triage \
+       --add-dir ./ra-skills/skills/export-control-intake \
+       --add-dir ./ra-skills/skills/lab-safety-intake \
+       --add-dir ./ra-skills/skills/international-collaboration-logistics \
        --add-dir ./ra-skills/skills/ethics-review-support \
        --add-dir ./ra-skills/skills/progress-report \
        --add-dir ./ra-skills/skills/research-data-management \
        --add-dir ./ra-skills/skills/research-metrics \
+       --add-dir ./ra-skills/skills/research-strategy-brief \
        --add-dir ./ra-skills/skills/era-guide \
        --add-dir ./ra-skills/skills/event-organizer \
        --add-dir ./ra-skills/skills/create-ra-skill
@@ -149,11 +174,10 @@ claude --add-dir ./ra-skills/skills/create-ra-skill
 
 まだ作られていないスキルのアイデア:
 
-- **産学連携コーディネート** — 共同研究契約、知財管理の支援
-- **国際共同研究支援** — 海外機関との契約・渡航手続きの支援
-- **研究広報支援** — プレスリリース作成、研究成果の発信支援
-- **知財管理** — 特許出願・ライセンス管理の支援
-- **安全保障輸出管理** — 該非判定、輸出許可申請の支援
+- **利益相反・COI確認** — 企業連携、兼業、寄附、研究費の利益相反論点整理
+- **研究インテグリティ確認** — 海外機関、兼業、資金源、所属・役職の確認支援
+- **サブアワード管理** — 再委託、分担機関、請求、成果物、監査対応の支援
+- **人件費・エフォート管理** — RA、研究員、兼務、エフォート、雇用終了の管理
 
 ## ライセンス
 

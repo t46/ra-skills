@@ -21,8 +21,8 @@ MEXT / CRAMS の URA スキル標準では、URA 業務は以下の 4 区分、2
 |---|---|---|---:|---|
 | 研究戦略推進 | 政策情報等の調査・分析 | `policy-monitor` | Medium | 学内展開、定期 digest、データベース化 |
 | 研究戦略推進 | 研究力の調査・分析 | `research-metrics` | Medium | 機関 IR、部局戦略、研究者 DB 整備 |
-| 研究戦略推進 | 研究戦略策定 | なし | Low | 研究拠点形成、部局調整、施策立案 |
-| プレアワード | プロジェクト企画立案支援 | 一部 `funding-search`, `grant-proposal-review` | Low | 研究チーム組成、企画案作成、採択結果分析 |
+| 研究戦略推進 | 研究戦略策定 | `research-strategy-brief` | Low | 研究拠点形成、部局調整、施策立案の実例が不足 |
+| プレアワード | プロジェクト企画立案支援 | 一部 `funding-search`, `grant-proposal-review`, `research-strategy-brief` | Low | 研究チーム組成、企画案作成、採択結果分析 |
 | プレアワード | 外部資金情報収集 | `funding-search` | Medium | 機関内公募、件数制限、研究者別配信 |
 | プレアワード | プロジェクト企画のための内部折衝活動 | `stakeholder-coordination` | Medium | 学内研究者・部局・事務局との調整をさらに事例化 |
 | プレアワード | プロジェクト実施のための対外折衝・調整 | `stakeholder-coordination` | Medium | 共同機関、企業、FA、NDA、事業計画調整の専門分岐 |
@@ -30,17 +30,17 @@ MEXT / CRAMS の URA スキル標準では、URA 業務は以下の 4 区分、2
 | ポストアワード | プロジェクト実施のための対外折衝・調整 | `stakeholder-coordination`, 一部 `budget-execution` | Medium | 採択後 FA 調整、共同機関調整、契約変更 |
 | ポストアワード | プロジェクトの進捗管理 | `project-meeting-ops`, `project-progress-tracker` | Medium | 成果台帳、評価対応、予算連携を強化 |
 | ポストアワード | プロジェクト予算管理 | `budget-execution` | Medium | 資金種別別、配分案、内部監査、執行状況 tracking |
-| ポストアワード | プロジェクト評価対応関連業務 | 一部 `progress-report` | Low | 外部評価委員会、ヒアリング、評価資料作成 |
+| ポストアワード | プロジェクト評価対応関連業務 | 一部 `progress-report`, `research-output-registry` | Low | 外部評価委員会、ヒアリング、評価資料作成 |
 | ポストアワード | 報告書作成業務 | `progress-report` | Medium | 日常進捗ログからの報告書生成 |
 | 関連専門 | 教育プロジェクト支援 | なし | None | 大学院教育、博士人材、教育研究連携 |
-| 関連専門 | 国際連携支援 | なし | None | 国際共同研究、招聘、調印式、海外機関連絡 |
-| 関連専門 | 産学連携支援 | なし | None | 企業探索、共同研究、NDA、受託研究 |
-| 関連専門 | 知財関連 | なし | None | 発明相談、出願、共同出願、ライセンス |
-| 関連専門 | 研究機関としての発信力強化推進 | 一部 `event-organizer` | Low | 研究シーズ集、Web、広報戦略 |
-| 関連専門 | 研究広報関連 | 一部 `event-organizer` | Low | プレスリリース、取材、英文発信 |
+| 関連専門 | 国際連携支援 | `international-collaboration-logistics` | Low | 国際共同研究、招聘、調印式、海外機関連絡の実例が不足 |
+| 関連専門 | 産学連携支援 | `collaboration-contract-intake` | Low | 企業探索、共同研究、NDA、受託研究の専門部署連携を要検証 |
+| 関連専門 | 知財関連 | `ip-disclosure-triage` | Low | 発明相談、出願、共同出願、ライセンスの実例が不足 |
+| 関連専門 | 研究機関としての発信力強化推進 | 一部 `event-organizer`, `research-pr-support` | Low | 研究シーズ集、Web、広報戦略 |
+| 関連専門 | 研究広報関連 | `research-pr-support`, 一部 `event-organizer` | Low | プレスリリース、取材、英文発信の公開前確認が要検証 |
 | 関連専門 | イベント開催関連 | `event-organizer` | Medium | 成果報告会、展示会、評価委員会イベント |
-| 関連専門 | 安全管理関連 | なし | None | 薬品、遺伝子組換え、放射線、事故対応 |
-| 関連専門 | 倫理・コンプライアンス関連 | `ethics-review-support`, 一部 `research-data-management` | Medium | 研究不正、利益相反、個人情報、輸出管理 |
+| 関連専門 | 安全管理関連 | `lab-safety-intake` | Low | 薬品、遺伝子組換え、放射線、事故対応の機関差が大きい |
+| 関連専門 | 倫理・コンプライアンス関連 | `ethics-review-support`, `export-control-intake`, 一部 `research-data-management` | Medium | 研究不正、利益相反、個人情報はまだ薄い |
 
 ## 実務 lifecycle
 
@@ -142,10 +142,9 @@ MEXT / CRAMS の URA スキル標準では、URA 業務は以下の 4 区分、2
 ## 現行 repo の構造的な不足
 
 - **会議・予定・進捗管理は追加したが、成果台帳と予算連携はまだ薄い**: `project-meeting-ops`, `project-progress-tracker` により入口はできたが、評価・報告・予算執行との自動接続は今後の課題。
-- **内部折衝・対外折衝は追加したが、契約・知財・産学連携は未分化**: `stakeholder-coordination` は汎用調整に対応するが、専門部署連携スキルが必要。
-- **契約・知財・産学連携がない**: 国内大学の URA 実務では共同研究、NDA、発明相談、共同出願、ライセンスが重要。
-- **安全管理・輸出管理がない**: 先端技術・国際共同研究・留学生受入・海外送付を扱う研究では必須。
-- **研究広報が弱い**: プレスリリース、研究シーズ、英文発信、Web 掲載、取材対応が独立していない。
+- **専門部署連携は初版を追加したが、現場検証が必要**: 契約、知財、輸出管理、安全、研究広報は論点整理として作ったが、確認先・責任分界・機関差のレビューが必要。
+- **研究インテグリティ、COI、情報セキュリティがまだ薄い**: 先端技術・国際共同研究・企業連携では重要だが、独立スキル化できていない。
+- **成果台帳と評価対応の実例が不足**: `research-output-registry` は追加したが、外部評価委員会、ヒアリング、成果報告会への接続は今後の課題。
 
 ## 優先的に増やすべきスキル
 

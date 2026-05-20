@@ -407,10 +407,14 @@ h3 {
   line-height: 1.65;
 }
 
+.feedback-links {
+  display: grid;
+  gap: 8px;
+}
+
 .feedback-popover a,
 .feedback-email {
   display: inline-flex;
-  margin-right: 10px;
   font-weight: 700;
 }
 
